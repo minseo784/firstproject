@@ -7,10 +7,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class ArticleForm {
+    private Long id;
     private String title; // 제목 받는 필드
     private String content; // 내용 받는 필드
 
     public Article toEntity() {
-        return new Article(null, title, content);
+        return new Article(id, title, content);
     }
 }
